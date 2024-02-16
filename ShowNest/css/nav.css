@@ -1,0 +1,103 @@
+/* start ----- header-nav ----- */
+
+
+#header-nav {
+    background-color: var(--main-color);
+}
+
+
+#header-nav a {
+    color: #fff;
+}
+
+
+#header-nav a:hover {
+    background-color: var(--main-color-hover);
+}
+
+
+h1 {
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+
+#header-nav #header-nav-logo:hover {
+    background-color: transparent;
+}
+
+
+#header-nav img {
+    height: 20px;
+}
+
+
+#header-nav-search-div {
+    background-color: #fff;
+}
+
+
+#header-nav-magnifier-icon {
+    padding: 0px 5px 0px 10px;
+}
+
+
+#header-nav-search-input {
+    border: none;
+    width: 110px;
+    height: 40px;
+    transition: .3s ease;
+}
+
+
+#header-nav-search-input:focus {
+    outline: none;
+    width: 130px;
+}
+
+
+#header-nav .dropdown-item {
+    width: 300px;
+    color: #333;
+}
+
+
+#header-nav .dropdown-item:hover {
+    background-color: #ddd;
+}
+
+
+#header-functions-right i{
+    margin-right: 10px;
+}
+
+
+#header-nav-search-div {
+    margin-left: 10px;
+}
+
+
+#header-nav .dropdown-menu p{
+    padding: 13px 15px;
+    font-weight: 700;
+}
+
+
+#header-nav .dropdown-menu img{
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+
+
+#user-name{
+    text-align: center;
+}
+h2{
+    margin: 20px 0px 10px;
+}
+
+
+
+/* end ----- header-nav ----- */

@@ -7,198 +7,260 @@
     <title>ShowNest</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="home_style.css">
+    <link href="https://meyerweb.com/eric/tools/css/reset/reset200802.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/nav.css"> -->
+    <!-- <link rel="stylesheet" href="css/footer.css"> -->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/organize.css">
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet">
 
 </head>
 
 <body>
     <!-- 網站骨架起始點-->
-    <div class="main">
-        <div class="container">
-            <nav id="header-nav" class="d-flex logged-in-nav">
-                <input type="checkbox" id="nav-checkbox" class="d-none">
-                <div id="header-nav-wrap" class="width">
-                    <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
-                        <h1><a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a></h1>
-                        <label id="nav-checkbox-label" for="nav-checkbox"></label>
-                    </div>
-                    <div id="header-functions" class="">
-                        <div id="header-functions-left" class="">
-                            <a href="">我的票券</a>
-                            <a href="">探索活動</a>
-                            <div id="header-nav-search-div" class="d-flex align-items-center">
-                                <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
-                                <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
-                            </div>
-                        </div>
-                        <div id="header-functions-right" class="">
-                            <a id="new-event" class="" href="#"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
-                            <div id="org-select-wrap" class="d-flex align-items-center dropdown btn-group">
-                                <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">選擇組織</a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <p>組織列表</p>
-                                    <li><a href="" class="dropdown-item org">BS</a></li>
-                                    <li><a href="" class="dropdown-item org">
-                                        <i class="fa-solid fa-circle-plus"></i>建立新組織</a></li>
-                                </ul>
-                            </div>
-                            <div id="user-account-wrap" class="d-flex align-items-center dropdown btn-group">
-                                <a id="user-account" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
-                                                src="./imgs/magnifier_icon.svg" alt="user's photo">彭德・佛傑</a>
-                                    </li>
-                                    <li><a id="nav-user-setting" class="dropdown-item" href="#">
-                                        <i class="fa-solid fa-gear"></i>設定</a></li>
-                                    <li><a id="nav-user-orders" class="dropdown-item" href="#">
-                                        <i class="fa-solid fa-ticket"></i>訂單</a></li>
-                                    <li><a id="nav-logout" class="dropdown-item" href="#">
-                                        <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
-                                </ul>
-                            </div>
-                        </div>
+    <!-- logged-in-header-nav -->
+    <nav id="header-nav" class="d-flex logged-in-nav">
+        <input type="checkbox" id="nav-checkbox" class="d-none">
+        <div id="header-nav-wrap" class="width">
+            <div id="header-nav-logo-and-menu-button-wrap" class="d-flex align-items-center justify-content-between">
+                <h1><a href="" id="header-nav-logo"><img src="./imgs/nav_logo.png" alt=""></a></h1>
+                <label id="nav-checkbox-label" for="nav-checkbox"></label>
+            </div>
+            <div id="header-functions" class="">
+                <div id="header-functions-left" class="">
+                    <a href="">我的票券</a>
+                    <a href="">探索活動</a>
+                    <div id="header-nav-search-div" class="d-flex align-items-center">
+                        <img src="./imgs/magnifier_icon.svg" alt="" id="header-nav-magnifier-icon">
+                        <input type="text" id="header-nav-search-input" placeholder="搜尋活動">
                     </div>
                 </div>
-            </nav>
-            <header class="header">
-
-                <h1>
-                    <span class="name">組織名稱</span>
-                    <span class="title"></span>
-                </h1>
-                <hr>
-            </header>
-            <div class="row">
-                <div class="col-md-6 order-md-1">
-                    <!-- 左邊區塊 -->
-                    <h2>設定組織資料</h2>
-                    <div class="mb-3">
-                        <label for="organizename" class="form-label"><abbr title="required">*</abbr>組織名稱</label>
-                        <input type="text" class="form-control" id="organizename" aria-label="organizename"
-                            aria-describedby="basic-addon1">
+                <div id="header-functions-right" class="">
+                    <a id="new-event" class="" href="#"><i class="fa-solid fa-circle-plus"></i>建立活動</a>
+                    <div id="org-select-wrap" class="d-block dropdown btn-group">
+                        <a id="org-select" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">選擇組織</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <p>組織列表</p>
+                            <li><a href="" class="dropdown-item org">BS</a></li>
+                            <li><a href="" class="dropdown-item org">BS2</a></li>
+                            <li><a href="" class="dropdown-item org">
+                                    <i class="fa-solid fa-circle-plus"></i>建立新組織</a></li>
+                        </ul>
                     </div>
-
-
-                    <div class="mb-3">
-                        <label class="typeinnetaddress"><abbr title="required">*</abbr>網址</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url"
-                                aria-describedby="basic-addon3 basic-addon4" aria-label="organizenetaddress">
-                            <span class="input-group-text" id="basic-addon3">shownest.cc</span>
-                        </div>
-                        <div class="form-text" id="basic-addon4">3 到 16 個小寫英文或數字。</div>
+                    <div id="user-account-wrap" class="d-block align-items-center dropdown btn-group">
+                        <a id="user-account" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="fa-solid fa-user"></i><span>彭德・佛傑</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a id="user-name" class="dropdown-item d-inline-flex flex-column" href="#"><img
+                                        src="./imgs/magnifier_icon.svg" alt="user's photo">彭德・佛傑</a>
+                            </li>
+                            <li><a id="nav-user-setting" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-gear"></i>設定</a></li>
+                            <li><a id="nav-user-orders" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-ticket"></i>訂單</a></li>
+                            <li><a id="nav-logout" class="dropdown-item" href="#">
+                                    <i class="fa-solid fa-right-from-bracket"></i>登出</a></li>
+                        </ul>
                     </div>
-
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">網站</label>
-                        <input type="text" class="form-control" aria-label="netaddress">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">描述</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
-                            aria-label="describe"></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Facebook 粉絲團網址</label>
-                        <input type="text" class="form-control" aria-label="FBnetaddress">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Twitter 帳號</label>
-                        <input type="text" class="form-control" aria-label="twitternetaddress">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Flickr 相簿網址</label>
-                        <input type="text" class="form-control" aria-label="Flickrnetaddress">
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="typein"><abbr title="required">*</abbr>回覆E-mail地址</label>
-                        <input type="text" class="form-control" aria-label="netaddress">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">隱私權政策</label>
-                        <input type="text" class="form-control" placeholder="請輸入網址" aria-label="organizename"
-                            aria-describedby="basic-addon1">
-                        <div class="form-text" id="basic-addon4">設定後，所有活動將此採取此網址作為預設隱私權政策</div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="typein"><abbr title="required">*</abbr>顯示/隱藏 「聯絡主辦單位」</label>
-                        <div class="controls">
-                            <label>
-                                <input type="radio" name="organizeShowContact" value="true" checked> 顯示
-                            </label>
-                            <label>
-                                <input type="radio" name="organizeShowContact" value="false"> 隱藏
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label style="font-weight: normal;">
-                            <input type="checkbox" name="agree_terms" ng-model="agreeTerms">
-                            我已經閱讀並同意
-                            <a href="/org_terms.html" target="_blank">主辦單位服務條款</a>
-                            與
-                            <a href="/policy.html" target="_blank">隱私權政策</a>
-
-                        </label>
-                    </div>
-
-
                 </div>
-                <div class="col-md-6 order-md-2">
-                    <!-- 右邊區塊 -->
-                    <label for="basic-url" class="form-label">社群分享圖片</label>
-                    <div class="community-share-image">
-                        <img src="https://picsum.photos/id/684/640/640" alt="community-img">
+            </div>
+        </div>
+    </nav>
+    <header class="header">
 
-                        <form>
-                            <div class="form-group">
-                                <input type="file" class="form-control-file" id="imageUpload">
-                            </div>
-                        </form>
+        <h1>
+            <span class="name">組織名稱</span>
+            <span class="title"></span>
+        </h1>
+        <hr>
+    </header>
+    <div class="row">
+        <div class="col-md-6 order-md-1">
+            <!-- 左邊區塊 -->
+            <h2>設定組織資料</h2>
+            <div class="mb-3">
+                <label for="organizename" class="form-label"><abbr title="required">*</abbr>組織名稱</label>
+                <input type="text" class="form-control" id="organizename" aria-label="organizename"
+                    aria-describedby="basic-addon1">
+            </div>
 
-                    </div>
-                    <h3 class="lined">進階設定</h3>
-                    <hr class="border-dark border-4">
 
-
-                    <div class="mb-3">
-                        <label class="typein">預設時區</label>
-                        <div class="controls">
-                            <select class="form-select" aria-label="Default select example">
-                                <option value="Asia/Hong_Kong">(GMT+08:00) Asia/Hong_Kong</option>
-                                <option selected="selected" value="Asia/Taipei">(GMT+08:00) Asia/Taipei</option>
-                                <option value="Asia/Tokyo">(GMT+09:00) Asia/Tokyo</option>
-                                <option value="Asia/Seoul">(GMT+09:00) Asia/Seoul</option>
-                               <!-- 其他時區待補-->
-                              </select>
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Google Analytics 4 評估 ID</label>
-                        <input type="text" class="form-control" placeholder="請輸入網址" aria-label="organizename"
-                            aria-describedby="basic-addon1">
-                        <div class="form-text" id="basic-addon4">系統會在您的組織/活動頁面安插 GA4 ID（評估 ID 格式為 G-XXXXXXXXXX）</div>
-                    </div>
-
+            <div class="mb-3">
+                <label class="typeinnetaddress"><abbr title="required">*</abbr>網址</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4"
+                        aria-label="organizenetaddress">
+                    <span class="input-group-text" id="basic-addon3">shownest.cc</span>
                 </div>
+                <div class="form-text" id="basic-addon4">3 到 16 個小寫英文或數字。</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">網站</label>
+                <input type="text" class="form-control" aria-label="netaddress">
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">描述</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+                    aria-label="describe"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Facebook 粉絲團網址</label>
+                <input type="text" class="form-control" aria-label="FBnetaddress">
+            </div>
+
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Twitter 帳號</label>
+                <input type="text" class="form-control" aria-label="twitternetaddress">
+            </div>
+
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Flickr 相簿網址</label>
+                <input type="text" class="form-control" aria-label="Flickrnetaddress">
+            </div>
+
+            <div class="mb-3">
+                <label class="typein"><abbr title="required">*</abbr>回覆E-mail地址</label>
+                <input type="text" class="form-control" aria-label="netaddress">
+            </div>
+
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">隱私權政策</label>
+                <input type="text" class="form-control" placeholder="請輸入網址" aria-label="organizename"
+                    aria-describedby="basic-addon1">
+                <div class="form-text" id="basic-addon4">設定後，所有活動將此採取此網址作為預設隱私權政策</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="typein"><abbr title="required">*</abbr>顯示/隱藏 「聯絡主辦單位」</label>
+                <div class="controls">
+                    <label>
+                        <input type="radio" name="organizeShowContact" value="true" checked> 顯示
+                    </label>
+                    <label>
+                        <input type="radio" name="organizeShowContact" value="false"> 隱藏
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label style="font-weight: normal;">
+                    <input type="checkbox" name="agree_terms" ng-model="agreeTerms">
+                    我已經閱讀並同意
+                    <a href="/org_terms.html" target="_blank">主辦單位服務條款</a>
+                    與
+                    <a href="/policy.html" target="_blank">隱私權政策</a>
+
+                </label>
+            </div>
 
 
+        </div>
+        <div class="col-md-6 order-md-2">
+            <!-- 右邊區塊 -->
+            <label for="basic-url" class="form-label">社群分享圖片</label>
+            <div class="community-share-image">
+                <img src="https://picsum.photos/id/684/640/640" alt="community-img">
+
+                <form>
+                    <div class="form-group">
+                        <input type="file" class="form-control-file" id="imageUpload">
+                    </div>
+                </form>
 
             </div>
-            <button type="button" class="btn btn-success" type="submit">送出</button>
+            <h3 class="lined">進階設定</h3>
+            <hr class="border-dark border-4">
+
+
+            <div class="mb-3">
+                <label class="typein">預設時區</label>
+                <div class="controls">
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="Asia/Hong_Kong">(GMT+08:00) Asia/Hong_Kong</option>
+                        <option selected="selected" value="Asia/Taipei">(GMT+08:00) Asia/Taipei</option>
+                        <option value="Asia/Tokyo">(GMT+09:00) Asia/Tokyo</option>
+                        <option value="Asia/Seoul">(GMT+09:00) Asia/Seoul</option>
+                        <!-- 其他時區待補-->
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Google Analytics 4 評估 ID</label>
+                <input type="text" class="form-control" placeholder="請輸入網址" aria-label="organizename"
+                    aria-describedby="basic-addon1">
+                <div class="form-text" id="basic-addon4">系統會在您的組織/活動頁面安插 GA4 ID（評估 ID 格式為 G-XXXXXXXXXX）</div>
+            </div>
+
         </div>
 
 
+
+    </div>
+    <hr>
+    <div class="button-submit">
+        <button type="button" class="btn btn-success" type="submit">送出</button>
+    </div>
+    </div>
+
+    <!-- footer -->
+    <section id="footer-section">
+        <footer>
+            <div id="footer-links" class="width">
+                <ul>
+                    <p>參與活動</p>
+                    <li><a href="">常見問題</a></li>
+                    <li><a href="">購票流程說明</a></li>
+                    <li><a href="">探索所有活動</a></li>
+                    <li><a href="">下載 App</a></li>
+                </ul>
+                <ul>
+                    <p>舉辦活動</p>
+                    <li><a href="">主辦單位專區</a></li>
+                    <li><a href="">如何舉辦活動</a></li>
+                    <li><a href="">定價方式</a></li>
+                </ul>
+                <ul>
+                    <p>關於 KKTIX</p>
+                    <li><a href="">聯絡我們</a></li>
+                    <li><a href="">媒體素材</a></li>
+                    <li><a href="">加入 KKTIX</a></li>
+                    <li><a href="">隱私權政策</a></li>
+                    <li><a href="">服務條款</a></li>
+                </ul>
+                <ul id="footer-icon-ul">
+                    <p>追蹤 KKTIX</p>
+                    <li class="footer-icon-li d-flex flex-column">
+                        <a href="">台灣</a>
+                        <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                    </li>
+                    <li class="footer-icon-li d-flex flex-column">
+                        <a href="">香港</a>
+                        <span><a href="" class="footer-icon-a"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="" class="footer-icon-a"><i class="fa-brands fa-instagram"></i></a></span>
+                    </li>
+                    <li><a href="">部落格</a></li>
+                </ul>
+            </div>
+            <div id="footer-end" class="width">
+                <div>
+                    <img id="footer-logo" src="./imgs/nav_logo.png" alt="">
+                    <span>OOXX娛樂股份有限公司</span>
+                    <span>OOXX ENTERTAINMENT LIMITED</span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <a href="" class="footer-lang-active">繁體中文</a>
+                    <a href="">English</a>
+                    <a href="">日本語</a>
+                </div>
+            </div>
+        </footer>
+    </section>
     </div>
 
 

@@ -1,0 +1,25 @@
+.community-share-image img
+{
+
+width: 250px;
+height: 250px;
+}
+.mb-3,.button-submit  {
+    margin: 0 80px; 
+}
+.button-submit{
+    padding-bottom:80px;
+    
+}
+
+header{
+    margin: 0 40px; 
+}
+.name{
+    color: #999999;
+    font-size: 20.4px;
+}
+h2{
+    text-align: left;
+    margin: 0 80px; 
+}
